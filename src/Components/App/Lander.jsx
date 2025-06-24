@@ -14,6 +14,7 @@ import ListUserPaper from '../PaperList/ListUserPaper'
 import ConfigPaperList from '../PaperList/Conf/ConfigPaperList'
 import FormStructure from '../Form/FormStructure'
 import FormConfigurationScreen from '../FormConfiguration/FormConfigurationScreen'
+import HorizontalBarChart from '../Graph/HorizontalBarChart'
 
 
 const Lander = () => {
@@ -27,7 +28,8 @@ const Lander = () => {
     {loadBar ? <LinearProgress color={ValidationReducer ? 'warning' : 'primary'}/> : <></>}
     {ValidationReducer ? <AppNavBar setLoadBar={setLoadBar}/> : <></>}
       <Routes>
-        <Route path='/developer' element={<><p>Developer Page!</p><FormStructure/></>}/>
+        {/* <Route path='/developer' element={<><p>Developer Page!</p><FormStructure/></>}/> */}
+        <Route path='/developer' element={<><p>Developer Page!</p><HorizontalBarChart/></>}/>
         <Route path='/' element={<LogIn setLoadBar={setLoadBar}/>}/>
         <Route path='/createUser' element={<UserCrtLogIn setLoadBar={setLoadBar}/>}/>
         <Route path='/Home' element={!ValidationReducer ? <PageNotFound/> : <HomeBoard/>}/>

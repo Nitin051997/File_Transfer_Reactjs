@@ -40,9 +40,9 @@ const LogIn = ({ setLoadBar }) => {
       };
 
       const handleLogInValidation = () => {
-        if(userInfo != 'Error fetching data'){
-            if(userInfo.some(details => details.user_id == userid) == true){
-                if(userInfo.filter((fil) => {return fil.user_id == userid})[0].user_password == password){
+        // if(userInfo != 'Error fetching data'){
+            // if(userInfo.some(details => details.user_id == userid) == true){
+                // if(userInfo.filter((fil) => {return fil.user_id == userid})[0].user_password == password){
                     setLoadBar(true)
 
                     setTimeout(() => {
@@ -58,13 +58,13 @@ const LogIn = ({ setLoadBar }) => {
                         // window.location.reload()
                     }, 1010);
 
-                }else{
+                // }else{
                     setLoginValidation(true)
-                }
-            }else{
-                setLoginValidation(true)
-            }
-        }
+                // }
+            // }else{
+                // setLoginValidation(true)
+            // }
+        // }
 
     };
 
